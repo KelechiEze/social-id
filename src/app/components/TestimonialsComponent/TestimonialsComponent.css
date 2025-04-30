@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     padding: 60px 20px;
-    background-color: #6c63ff;
+    background: linear-gradient(to right, #b57aff, #7f5eff);
+
   }
   
   .testimonials-content {
