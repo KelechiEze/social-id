@@ -5,6 +5,7 @@ import HomeSection from './components/HomeSection/HomeSection';
 import ContactCenter from './components/ContactCenter/ContactCenter';
 import ContactComponent from './components/ContactComponent/ContactComponent';
 import ServicesComponent from './components/ServicesComponent/ServicesComponent';
+import TeamSection from './components/TeamSection/TeamSection';
 import TestimonialsComponent from './components/TestimonialsComponent/TestimonialsComponent';
 import StepsComponent from './components/StepsComponent/StepsComponent';
 import FooterComponent from './components/FooterComponent/FooterComponent';
@@ -17,6 +18,7 @@ export default function Home() {
       <ContactCenter />
       <StepsComponent />
       <ServicesComponent />
+      <TeamSection />
       <TestimonialsComponent />
       <ContactComponent />
       <FooterComponent />
