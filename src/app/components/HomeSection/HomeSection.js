@@ -1,12 +1,30 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './HomeSection.css';
 import { FaArrowRight } from 'react-icons/fa';
 
+const images = ['/brownsmile.jpg', '/smile2.png', '/smilr3.png'];
+
 const HomeSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const handlePlayClick = () => {
+    alert('Play video'); // Replace with actual video logic
+  };
+
   return (
-    <section className="homeSection">
+    <section
+      className="homeSection"
+      style={{ backgroundImage: `url(${images[currentSlide]})` }}
+    >
       <div className="overlay">
         <div className="homeContent">
           <h1>Convert Leads With Integrated Call Center</h1>
@@ -18,6 +36,22 @@ const HomeSection = () => {
             <span className="separator"></span>
             <FaArrowRight className="arrowIcon" />
           </button>
+        </div>
+
+        <div className="playButtonContainer" onClick={handlePlayClick}>
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className={`ripple ripple-${i}`}></div>
+          ))}
+          <div className="playButton">▶</div>
+        </div>
+
+        <div className="dotsContainer">
+          {images.map((_, idx) => (
+            <span
+              key={idx}
+              className={`dot ${idx === currentSlide ? 'active' : ''}`}
+            ></span>
+          ))}
         </div>
       </div>
     </section>
