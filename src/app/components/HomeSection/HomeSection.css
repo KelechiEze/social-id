@@ -1,6 +1,11 @@
-/* Prevent horizontal scroll */
-body, html {
+/* Global Reset */
+html, body {
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
   }
   
   /* Home Section */
@@ -11,9 +16,8 @@ body, html {
     height: 100vh;
     position: relative;
     color: white;
-    font-family: 'Poppins', sans-serif;
     transition: background-image 1s ease-in-out;
-    overflow-x: hidden; /* Prevent scroll caused by internal elements */
+    overflow-x: hidden;
   }
   
   /* Overlay */
@@ -56,7 +60,6 @@ body, html {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     cursor: pointer;
   }
@@ -97,11 +100,11 @@ body, html {
     opacity: 1;
   }
   
-  /* Play Button + Ripple */
+  /* Play Button */
   .playButtonContainer {
     position: absolute;
-    right: 290px; /* moved left from 100px */
-    bottom: 120px;
+    right: 200px;
+    bottom: 350px;
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -111,11 +114,12 @@ body, html {
     justify-content: center;
     cursor: pointer;
     z-index: 2;
+    overflow: hidden;
   }
   
   .playButton {
     color: white;
-    font-size: 24px;
+    font-size: 28px;
     z-index: 3;
     position: relative;
   }
@@ -123,9 +127,11 @@ body, html {
   /* Ripple Effect */
   .ripple {
     position: absolute;
-    width: 80%;  /* reduced from 100% */
+    width: 80%;
     height: 80%;
-    border: 30px solid #ff4b4b;
+    left: 10%;
+    top: 10%;
+    border: 2px solid #ff4b4b;
     border-radius: 50%;
     opacity: 0.2;
     animation: rippleAnimation 6s linear infinite;
@@ -137,7 +143,6 @@ body, html {
   .ripple-1 { animation-delay: 1.5s; }
   .ripple-2 { animation-delay: 3s; }
   .ripple-3 { animation-delay: 4.5s; }
-  .ripple-4 { animation-delay: 5s; }
   
   @keyframes rippleAnimation {
     0% {
@@ -177,7 +182,7 @@ body, html {
     }
   
     .playButtonContainer {
-      right: 10px; /* moved left from 20px */
+      right: 10px;
       bottom: 50px;
       width: 60px;
       height: 60px;

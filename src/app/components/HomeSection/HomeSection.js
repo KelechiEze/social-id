@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import './HomeSection.css';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaPlay } from 'react-icons/fa';
 
 const images = ['/brownsmile.jpg', '/smile2.png', '/smilr3.png'];
 
@@ -17,7 +17,7 @@ const HomeSection = () => {
   }, []);
 
   const handlePlayClick = () => {
-    alert('Play video'); // Replace with actual video logic
+    alert('Play video');
   };
 
   return (
@@ -42,7 +42,7 @@ const HomeSection = () => {
           {[...Array(4)].map((_, i) => (
             <div key={i} className={`ripple ripple-${i}`}></div>
           ))}
-          <div className="playButton">▶</div>
+          <FaPlay className="playButton" />
         </div>
 
         <div className="dotsContainer">
