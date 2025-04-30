@@ -33,7 +33,7 @@ const StepsComponent = () => {
             <div className="step-label">Add a Target<br></br> Line</div>
             <div className="step-circle">03</div>
             <p className="step-description">
-              Forward your calls to buyers or anywhere you'd like them to go
+              Forward your calls to buyers or anywhere youd like them to go
             </p>
           </div>
 
