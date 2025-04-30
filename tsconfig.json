@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/StepsComponent/StepsComponent.js", "src/app/components/Navbar/Navbar.js", "src/app/components/HomeSection/HomeSection.js", "src/app/components/ContactCenter/ContactCenter.js"],
   "exclude": ["node_modules"]
 }

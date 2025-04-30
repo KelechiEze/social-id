@@ -1,0 +1,124 @@
+.steps-container {
+    background-color: #f7f7f8;
+    padding: 150px 6%; /* Increased side padding */
+    width: 100%;
+  }
+  
+  .steps-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .steps-header {
+    margin-bottom: 60px;
+  }
+  
+  .steps-subtitle {
+    color: #ff6b6b;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  
+  .steps-title {
+    color: #1a1a1a;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .steps-timeline {
+    display: flex;
+    position: relative;
+    margin-top: 60px;
+  }
+  
+  .steps-timeline::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #e0e0e0;
+    top: 30px;
+    left: 0;
+    z-index: 0;
+  }
+  
+  .step-item {
+    flex: 1;
+    text-align: left;
+    padding-right: 15px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .step-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .step-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #6c63ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  
+  .step-description {
+    color: #747474;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 15px;
+    max-width: 90%;
+    padding-left: 75px; /* Added padding to align with the title */
+  }
+  
+  @media (max-width: 800px) {
+    .steps-timeline {
+      flex-direction: column;
+    }
+    
+    .steps-timeline::after {
+      display: none;
+    }
+    
+    .step-item {
+      margin-bottom: 40px;
+      padding-right: 0;
+    }
+    
+    .step-title {
+      margin-bottom: 15px;
+    }
+    
+    .step-description {
+      padding-left: 75px;
+    }
+    
+    .steps-title {
+      font-size: 28px;
+    }
+    
+    .steps-header {
+      margin-bottom: 40px;
+    }
+    
+    .steps-container {
+      padding: 60px 6%;
+    }
+  }
+  
