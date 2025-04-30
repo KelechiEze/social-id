@@ -15,8 +15,8 @@ export default function Home() {
       <Navbar />
       <HomeSection />
       <ContactCenter />
-      <ServicesComponent />
       <StepsComponent />
+      <ServicesComponent />
       <TestimonialsComponent />
       <ContactComponent />
       <FooterComponent />
