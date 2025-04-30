@@ -2,6 +2,7 @@
 
 import Navbar from './components/Navbar/Navbar';
 import HomeSection from './components/HomeSection/HomeSection';
+import BusinessContinuityBanner from './components/BusinessContinuityBanner/BusinessContinuityBanner';
 import ContactCenter from './components/ContactCenter/ContactCenter';
 import ContactComponent from './components/ContactComponent/ContactComponent';
 import ServicesComponent from './components/ServicesComponent/ServicesComponent';
@@ -15,6 +16,7 @@ export default function Home() {
     <main>
       <Navbar />
       <HomeSection />
+      <BusinessContinuityBanner />
       <ContactCenter />
       <StepsComponent />
       <ServicesComponent />

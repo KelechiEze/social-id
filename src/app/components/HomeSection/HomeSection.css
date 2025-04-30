@@ -14,11 +14,16 @@ html, body {
     background-position: center;
     background-attachment: fixed;
     height: 100vh;
-    position: relative;
+    position: relative; /* Already fine */
     color: white;
     transition: background-image 1s ease-in-out;
     overflow-x: hidden;
+  
+    /* Add ONLY if needed: */
+    z-index: 1;
+    overflow: visible; /* Allow content from below to overflow upward */
   }
+  
   
   /* Overlay */
   .overlay {
@@ -104,7 +109,7 @@ html, body {
   .playButtonContainer {
     position: absolute;
     right: 200px;
-    bottom: 350px;
+    bottom: 330px;
     width: 80px;
     height: 80px;
     border-radius: 50%;

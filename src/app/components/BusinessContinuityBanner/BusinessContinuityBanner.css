@@ -1,0 +1,60 @@
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #9058f2 0%, #4986f5 100%);
+    color: white;
+    padding: 60px 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1200px;
+    margin: -60px auto 0; /* Move it up and center */
+    width: 80%;
+    position: relative;   /* Needed for z-index */
+    z-index: 10;          /* Ensure it's above homeSection */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Optional: adds visual lift */
+  }
+  
+  .banner-text h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .discover-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .discover-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  @media screen and (max-width: 800px) {
+    .banner {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+      padding: 40px 20px;
+      margin-top: -25px;
+    }
+  
+    .banner-text h2 {
+      font-size: 20px;
+    }
+  
+    .discover-btn {
+      padding: 10px 18px;
+      font-size: 14px;
+    }
+  }
+  
