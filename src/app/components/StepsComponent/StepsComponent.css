@@ -1,6 +1,6 @@
 .steps-container {
     background-color: #f7f7f8;
-    padding: 150px 6%; /* Increased side padding */
+    padding: 130px 6%;
     width: 100%;
   }
   
@@ -10,115 +10,103 @@
   }
   
   .steps-header {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
+    text-align: left;
   }
   
   .steps-subtitle {
     color: #ff6b6b;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     letter-spacing: 0.5px;
+    text-transform: uppercase;
   }
   
   .steps-title {
     color: #1a1a1a;
-    font-size: 36px;
-    font-weight: 700;
-    margin: 0;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.4;
   }
   
   .steps-timeline {
     display: flex;
+    justify-content: space-between;
     position: relative;
     margin-top: 60px;
+    padding-bottom: 30px;
   }
   
   .steps-timeline::after {
     content: "";
     position: absolute;
-    width: 100%;
+    top: 79px; /* now below the circles */
+    left: 20;
+    width: 88%;
     height: 2px;
-    background-color: #e0e0e0;
-    top: 30px;
-    left: 0;
+    background-color: #a084e8;
     z-index: 0;
   }
   
   .step-item {
     flex: 1;
     text-align: left;
-    padding-right: 15px;
     position: relative;
     z-index: 1;
   }
   
-  .step-title {
-    font-size: 18px;
-    font-weight: 700;
+  .step-label {
+    font-weight: 800;
+    font-size: 15px; 
     color: #1a1a1a;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   
   .step-circle {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
+    background-color: #a084e8;
     border-radius: 50%;
-    background-color: #6c63ff;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-weight: 700;
-    font-size: 18px;
-    margin-right: 15px;
-    flex-shrink: 0;
+    margin: 0; /* remove auto-centering */
+    z-index: 2;
+    align-self: flex-start; /* aligns the circle to the left inside the flex column */
   }
   
   .step-description {
     color: #747474;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.6;
-    margin-top: 15px;
-    max-width: 90%;
-    padding-left: 75px; /* Added padding to align with the title */
+    margin-top: 20px;
+    padding: 0 10px;
   }
   
   @media (max-width: 800px) {
     .steps-timeline {
       flex-direction: column;
     }
-    
+  
     .steps-timeline::after {
       display: none;
     }
-    
+  
     .step-item {
       margin-bottom: 40px;
-      padding-right: 0;
     }
-    
-    .step-title {
-      margin-bottom: 15px;
-    }
-    
-    .step-description {
-      padding-left: 75px;
-    }
-    
+  
     .steps-title {
-      font-size: 28px;
+      font-size: 32px;
+      line-height: 1.5;
     }
-    
-    .steps-header {
-      margin-bottom: 40px;
-    }
-    
+  
     .steps-container {
-      padding: 60px 6%;
+      padding: 80px 6%;
     }
   }
   
